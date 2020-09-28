@@ -8,4 +8,8 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+## 笑死
+
+這個頁面還沒有好好的建立，
+
+敬請期待＝＝
