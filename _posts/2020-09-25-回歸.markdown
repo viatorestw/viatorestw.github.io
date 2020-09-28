@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "回歸"
-date:   2020-09-25 17:28:50 +0800
-categories: jekyll update
+title: 回歸
+author: Viatorestw
+date: 2020-09-25 17:28:50 +0800
+categories: [blog, talk]
+tags: [small talk]
 ---
 
 有一段時間沒有建模了，
