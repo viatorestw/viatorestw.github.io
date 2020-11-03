@@ -1,0 +1,65 @@
+安裝環境
+
+# 安裝ruby
+$ sudo apt-get install ruby-full build-essential zlib1g-dev
+
+# 安裝jekyll bundler
+$ gem install jekyll bundler
+
+# 建立blog(myblog)
+$ jekyll new myblog
+
+# 前往位置
+$ cd myblog
+
+# 啟動local server的方式
+$ bundle exec jekyll serve
+
+# 安裝 git
+$ sudo apt-get install git
+
+# 下載別人的blog
+$ git clone https://github.com/melangue/dactl.git
+$ git clone https://github.com/cotes2020/jekyll-theme-chirpy.git -b master --single-branch
+
+# can't find gem bundler (>= 0.a) with executable bundle (Gem::GemNotFoundException)
+$ gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+
+#Run 'bundle install'，是用來安裝plugins的。
+$ bundle install
+
+# 添加plugins - Jekyll-admin
+1. 在gemfile輸入
+	$ gem 'jekyll-admin', group: :jekyll_plugins
+2. cd到資料夾後
+	$ bundle install
+3. bundle exec jekyll serve
+4. http://localhost:4000/admin
+
+# yq: command not found
+snap install yq
+
+# 關於chirpy的一些工具
+1. bash tools/run.sh
+	建立categories和tags並且bundle exec jekyll serve
+2. bash tools/build.sh
+	建立categories和tags並且建立_site
+3. bash _scripts/sh/create_pages.sh
+	建立categories和tags
+
+--
+
+# 發文上傳流程：
+1. bundle exec jekyll serve
+2. bash tools/build.sh
+3. git st
+4. git add .
+5. git commit -m ""
+6. git ls
+7. bash _scripts/sh/dump_lastmod.sh
+8. bundle exec jekyll serve
+9. git push
+
+
+
+
