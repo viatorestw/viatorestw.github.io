@@ -19,13 +19,12 @@ $ bundle exec jekyll serve
 $ sudo apt-get install git
 
 # 下載別人的blog
-$ git clone https://github.com/melangue/dactl.git
 $ git clone https://github.com/cotes2020/jekyll-theme-chirpy.git -b master --single-branch
 
 # can't find gem bundler (>= 0.a) with executable bundle (Gem::GemNotFoundException)
 $ gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
 
-#Run 'bundle install'，是用來安裝plugins的。
+# Run 'bundle install'，是用來安裝plugins的。
 $ bundle install
 
 # 添加plugins - Jekyll-admin
@@ -37,7 +36,10 @@ $ bundle install
 4. http://localhost:4000/admin
 
 # yq: command not found
-snap install yq
+$ snap install yq
+
+# 目前使用的模板demo網址
+https://chirpy.cotes.info/
 
 # 關於chirpy的一些工具
 1. bash tools/run.sh
@@ -50,16 +52,14 @@ snap install yq
 --
 
 # 發文上傳流程：
-1. bundle exec jekyll serve
-2. bash tools/build.sh
-3. git st
-4. git add .
-5. git commit -m ""
-6. git ls
-7. bash _scripts/sh/dump_lastmod.sh
-8. bundle exec jekyll serve
-9. git push
-
-
+1. bundle exec jekyll serve		//先跑跑看
+2. bash tools/build.sh		//更新一下
+3. git st		//查看狀態
+4. git add .		//新增加入git
+5. git commit -m ""		//新增儲存git
+6. git ls		//查看commit
+7. bash _scripts/sh/dump_lastmod.sh		//建立lastmod目錄
+8. bundle exec jekyll serve		//再跑跑看
+9. git push		//上傳檔案
 
 
